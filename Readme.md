@@ -71,6 +71,11 @@ podman run -it --name Ubuntu-Development -m 32g --cpu-quota=50000  ubuntu
 ```
 #### Registry, Repository, Tag, Image, Container
 
+#### Connect between multiple container using one network
+
+```bash
+podman run -it --name Ubuntu-Development -m 32g --network host --cpu-quota=50000  ubuntu
+```
 #### Podman pod vs Docker container: 
 
 |Podman pod|Docker container|
@@ -78,3 +83,5 @@ podman run -it --name Ubuntu-Development -m 32g --cpu-quota=50000  ubuntu
 | group of container |  single container|
 | used for testing env like Kubernetes (K8s) | For application running|
 | Daemonless | Daemon |
+
+
